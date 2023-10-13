@@ -1,6 +1,8 @@
 # mysqlfs
 Uses FUSE to provide a virtual filesystem interface to a MySQL database.
 
+Requires libfuse-dev and libmysqlclient-dev
+
 The root directory contains all available databases as directories, and
 within each database directory will be subdirectories of all the tables for
 that corresponding database.
