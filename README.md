@@ -1,5 +1,5 @@
 # mysqlfs
-Uses FUSE to provide a virtual filesystem interface to a MySQL database.
+## Uses FUSE to provide a virtual filesystem interface to a MySQL database.
 
 Requires libfuse-dev and libmysqlclient-dev
 
@@ -24,14 +24,14 @@ File extensions
 Common file extensions are supported to export the data into the desired
 format:
 
-  txt -- plain text, space separated values
-  json -- JSON encoded data
-  csv -- comma separated values
+  * txt -- plain text, space separated values
+  * json -- JSON encoded data
+  * csv -- comma separated values
 
 
 File open modes:
-  O_RDONLY -- read only, perform (SELECT/DESC/SHOW) query when opening file
-  O_WRONLY -- write only, delete all rows from table when opening file, should use INSERT when writing
-  O_RDWR -- read/write, do nothing upon opening, should use REPLACE or UPDATE when writing, not sure how to mix read and write queries
-  O_APPEND -- do nothing upon opening, should only allow INSERT when writing
-  O_TRUNC - if open for write, delete all rows from table when opening file
+* O_RDONLY -- read only, perform (SELECT/DESC/SHOW) query when opening file
+* O_WRONLY -- write only, delete all rows from table when opening file, should use INSERT when writing
+* O_RDWR -- read/write, do nothing upon opening, should use REPLACE or UPDATE when writing, not sure how to mix read and write queries
+* O_APPEND -- do nothing upon opening, should only allow INSERT when writing
+* O_TRUNC - if open for write, delete all rows from table when opening file
