@@ -557,7 +557,7 @@ static int mysqlfs_write(const char *path, const char *buf, size_t size, off_t o
 	map<string, fsNode *>::iterator ni;
 	fsQuery *fq;
 
-	syslog(LOG_INFO, "mysqlfs_read(%s, %lu, %ld)", path, size, offset);
+	syslog(LOG_INFO, "mysqlfs_write(%s, %lu, %ld)", path, size, offset);
 
 	if ( (ni=fsNodes.find(path)) == fsNodes.end() )
 		return -ENOENT;
